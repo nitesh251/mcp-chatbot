@@ -5,46 +5,30 @@ This is a prototype customer support chatbot for a computer products company, us
 ## Features
 
 - Answers customer queries for printers, monitors, and more using MCP API.
-- Grok-powered LLM for open-domain fallback answers.
+- GroQ-powered LLM for open-domain fallback answers.
 - Demo UI built with Streamlit.
 - Easy to run on HuggingFace Spaces or locally.
 
+# Customer Support Chatbot (Groq + Streamlit)
+
+A demo customer support chatbot for computer products.
+
+## Tech Stack
+- Streamlit UI
+- Groq LLM (Llama 3 8B instant)
+- MCP Server (Streamable HTTP)
+
 ## How to Run
 
-#### 1. Install dependencies
-
-```
+```bash
 pip install -r requirements.txt
-```
-
-#### 2. Start the backend API
-
-```
-python backend.py
-```
-
-#### 3. Start the Streamlit UI (in a new terminal)
-
-```
 streamlit run app.py
-```
 
 #### 4. Usage
 
 - Open `http://localhost:8501` (Streamlit).
 - Type a question (e.g., "My printer is not working").
 - The bot answers using the MCP backend if possible, else uses Grok LLM.
-
-## Deployment
-
-- Deploy `backend.py` on HuggingFace Spaces as a FastAPI Space.
-- Deploy `app.py` on HuggingFace Spaces as a Streamlit Space.
-- Adjust `API_URL` in `app.py` to point to the backend.
-
-## Customizing the Bot
-
-- Change the LLM or add intents in `backend.py` for other products/features.
-- Add more MCP endpoints as needed.
 
 ## Further Development Ideas
 
